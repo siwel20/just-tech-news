@@ -21,6 +21,7 @@ router.get('/:id', (req, res) => {
       where: {
         id: req.params.id
       }
+      // include model post??
     })
       .then(dbUserData => {
         if (!dbUserData) {
