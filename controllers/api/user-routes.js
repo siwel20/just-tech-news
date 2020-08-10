@@ -90,8 +90,8 @@ router.post('/', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-// do I need this withAuth here?
-router.post('/login', withAuth, (req, res) => {
+
+router.post('/login', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
